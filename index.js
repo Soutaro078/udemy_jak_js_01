@@ -239,9 +239,82 @@
  * mapやfilterを使った配列の処理
  */
 
-const nameArr = ["田中","山田","じゃけえ"];
-for (let index = 0; index < nameArr.length; index++) {
-    console.log(nameArr[index]);
-}
+// const nameArr = ["田中","山田","じゃけえ"];
+// for (let index = 0; index < nameArr.length; index++) {
+//     console.log(nameArr[index]);
+// }
+
+// // mapを使う(配列に対して使用する)
+// const nameArr2 = nameArr.map((name) => {    
+//     return name;
+// });
+// console.log(nameArr2);
+
+// filterを使う(mapに条件式が付いたものくらいの感覚)
+const numArr = [1,2,3,4,5];
+
+// const numArr3 = numArr.map((num) => {
+//     return num % 2 == 1;
+// })
+// console.log(numArr3);
+
+// mapとfilterだと配列の要素を基本的に出力するが，console.log()で短縮表示もできる
+// 例
+// const numArr4 = numArr.map((num) => console.log(num));
+
+/**
+ * 三項演算子
+ */
+
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時　の書き方
+// const val1 = 1 > 0 ? 'true' : 'false';
+// console.log(val1);
+
+// const num1 = 1300;
+// const formattedNum = typeof num1 === 'number' ? num1.toLocaleString() : '数値を入力してください';
+// console.log(formattedNum);
+
+// const CheckSum = (num1,num2) => {
+//     return num1 + num2 > 100 ? '100を超えています' : '許容範囲内です';
+// }
+// console.log(CheckSum(50,40));
+// console.log(CheckSum(50,60));
+
+/**
+ * 論理演算子の本当の意味を知ろう
+ */
+
+/**
+ * truthy , falsyについて
+ * JavaScriptでは，trueとfalse以外にもtrueとfalseになる値が存在する
+ * 例
+ * falseになる値：undefined,null,0,"",NaN
+ * それ以外はtrueになる
+ */
+
+// const val = "ABC"
+// if(val) {
+//     console.log('valはtrueです');
+// }else{
+//     console.log('valはfalseです');
+// }
+
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2) {
+//     console.log('1か2はtrueになります');
+// }else{
+//     console.log('1も2もfalseです');
+// }
 
 
+// // ||は左側がfalseなら右側を返す
+// const num = null;
+// const fee = num || '金額未設定です';
+// console.log(fee);
+
+// // &&は左側がtrueなら右側を返す(左側がfalseなら右側を返す)
+// const num2 = 100;
+// const fee2 = num2 && '何か設定されました';
+// console.log(fee2);
